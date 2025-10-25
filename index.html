@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads - Guia Completo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+        }
+
+        .logo {
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            font-size: 2rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-left-color: #667eea;
+        }
+
+        /* Content */
+        .content {
+            flex: 1;
+            padding: 3rem;
+            overflow-y: auto;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #4a5568;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+
+        .callout {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+        }
+
+        .callout p {
+            color: white;
+            margin: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 2rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f7fafc;
+        }
+
+        strong {
+            color: #2d3748;
+        }
+
+        blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1><span>🔹</span>Meta Ads</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">📋 Início</a></li>
+                <li><a href="#modulo1">1️⃣ Apresentação da Plataforma</a></li>
+                <li><a href="#modulo2">2️⃣ Funcionamento do Algoritmo</a></li>
+                <li><a href="#modulo3">3️⃣ Aprendizado e Otimização</a></li>
+                <li><a href="#modulo4">4️⃣ Inteligência da Página</a></li>
+                <li><a href="#modulo5">5️⃣ Segmentação</a></li>
+                <li><a href="#modulo6">6️⃣ Criativos</a></li>
+                <li><a href="#modulo7">7️⃣ Estratégias de Campanha</a></li>
+                <li><a href="#modulo8">8️⃣ Ganchos</a></li>
+                <li><a href="#modulo9">9️⃣ Métricas</a></li>
+                <li><a href="#modulo10">🔟 Decisões Técnicas</a></li>
+                <li><a href="#modulo11">✅ Boas Práticas</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <!-- HOME -->
+            <section id="home" class="section active">
+                <h1>🔹 Meta Ads - Guia Completo</h1>
+                <p>Bem-vindo ao guia completo de Meta Ads! Este material didático abrange todos os aspectos essenciais para dominar a plataforma de anúncios do Facebook e Instagram.</p>
+                
+                <h2>📚 Módulos do Curso</h2>
+                <ul>
+                    <li><strong>Módulo 1:</strong> Apresentação da Plataforma Meta Ads</li>
+                    <li><strong>Módulo 2:</strong> Funcionamento do Algoritmo</li>
+                    <li><strong>Módulo 3:</strong> Aprendizado e Otimização</li>
+                    <li><strong>Módulo 4:</strong> Inteligência da Página</li>
+                    <li><strong>Módulo 5:</strong> Segmentação</li>
+                    <li><strong>Módulo 6:</strong> Criativos</li>
+                    <li><strong>Módulo 7:</strong> Estratégias de Campanha</li>
+                    <li><strong>Módulo 8:</strong> Ganchos</li>
+                    <li><strong>Módulo 9:</strong> Métricas</li>
+                    <li><strong>Módulo 10:</strong> Decisões Técnicas</li>
+                    <li><strong>Módulo 11:</strong> Boas Práticas</li>
+                </ul>
+
+                <div class="callout">
+                    <p><strong>💡 Dica:</strong> Navegue pelos módulos usando o menu lateral. Este é um material completo para você dominar o Meta Ads Manager!</p>
+                </div>
+            </section>
+
+            <!-- MÓDULO 1 -->
+            <section id="modulo1" class="section">
+                <h1>🔹 1. Apresentação da Plataforma Meta Ads</h1>
+
+                <h3>1. O que é</h3>
+                <p>O Meta Ads Manager é o centro de controle de todos os anúncios do Facebook, Instagram, Messenger e Audience Network. É nele que você define objetivos, cria campanhas, controla orçamentos, segmenta públicos, analisa resultados e otimiza performance.</p>
+
+                <hr>
+
+                <h3>2. A estrutura hierárquica (3 níveis)</h3>
+                <p>A Meta Ads opera em três camadas, cada uma com função estratégica.</p>
+
+                <h3>2.1. Campanha</h3>
+                <ul>
+                    <li>Define o objetivo principal, como tráfego, engajamento, conversão, leads ou vendas.</li>
+                    <li>O algoritmo usa esse objetivo para encontrar o público mais propenso a realizar a ação desejada.</li>
+                    <li><strong>Erro comum:</strong> escolher objetivo errado.
+                        <ul>
+                            <li>Se quer vendas, não use Engajamento.</li>
+                            <li>Se quer tráfego, não use Conversão.</li>
+                            <li>O aprendizado se guia pelo evento configurado no nível da campanha.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>2.2. Conjunto de anúncios</h3>
+                <ul>
+                    <li>Define quem verá o anúncio, onde e com que verba.</li>
+                    <li>Configurações principais:
+                        <ul>
+                            <li><strong>Público:</strong> segmentação fria, personalizada ou lookalike.</li>
+                            <li><strong>Posicionamento:</strong> automático (recomendado) ou manual.</li>
+                            <li><strong>Otimização e entrega:</strong> escolha do evento (ex: cliques, visualizações, conversões).</li>
+                            <li><strong>Orçamento:</strong> diário ou vitalício (ABO) ou controlado pela campanha (CBO).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Regra de ouro:</strong> o conjunto é onde você diz para quem e como o algoritmo deve entregar.</li>
+                </ul>
+
+                <h3>2.3. Anúncio</h3>
+                <ul>
+                    <li>É o que o usuário realmente vê.</li>
+                    <li>Contém:
+                        <ul>
+                            <li>Criativo (imagem, vídeo, carrossel, Reels etc.)</li>
+                            <li>Texto principal</li>
+                            <li>Título e botão de chamada (CTA)</li>
+                            <li>URL de destino (site, WhatsApp, Instagram, etc.)</li>
+                        </ul>
+                    </li>
+                    <li>Aqui é onde se vence ou perde o jogo da atenção.</li>
+                </ul>
+
+                <hr>
+
+                <h3>3. Tipos de objetivos (2025 — formato atual Meta)</h3>
+                <p>A Meta reorganizou os objetivos em seis blocos unificados. Cada um treina o algoritmo para comportamentos diferentes:</p>
+
+                <ol>
+                    <li><strong>Reconhecimento (Awareness):</strong> gerar lembrança e alcance.</li>
+                    <li><strong>Tráfego (Traffic):</strong> levar pessoas a um site, app ou chat.</li>
+                    <li><strong>Engajamento (Engagement):</strong> gerar curtidas, comentários, seguidores, mensagens, etc.</li>
+                    <li><strong>Leads:</strong> captar cadastros ou conversas qualificadas.</li>
+                    <li><strong>Vendas (Sales):</strong> gerar conversões, compras ou ações no site.</li>
+                    <li><strong>App Promotion:</strong> promover instalações e engajamento no aplicativo.</li>
+                </ol>
+
+                <div class="callout">
+                    <p><strong>O objetivo define o tipo de sinal que o algoritmo vai perseguir.</strong> Escolher errado é como treinar um atleta de natação para correr maratona.</p>
+                </div>
+
+                <hr>
+
+                <h3>4. Leilão da Meta (como o sistema decide quem aparece)</h3>
+                <p>Todo anúncio entra em um leilão instantâneo. Cada vez que um usuário abre o app, o sistema decide qual anúncio exibir com base em três fatores:</p>
+
+                <hr>
+
+                <h3>6. Exemplo prático</h3>
+                <p>Suponha que você quer aumentar seguidores e comentários no Instagram. Seu caminho correto seria:</p>
+
+                <ol>
+                    <li><strong>Campanha:</strong> objetivo Engajamento.</li>
+                    <li><strong>Conjunto:</strong> público amplo (ex: Brasil, 18–44 anos, posicionamento automático).</li>
+                    <li><strong>Anúncio:</strong> vídeo curto (Reels) com chamada envolvente e CTA para seguir o perfil.</li>
+                </ol>
+
+                <p>Assim o sistema aprende quem mais tende a interagir com seu conteúdo, otimizando custo e entrega.</p>
+            </section>
+
+            <!-- MÓDULO 2 -->
+            <section id="modulo2" class="section">
+                <h1>🔹 2. Funcionamento do Algoritmo</h1>
+
+                <h3>1. O papel do algoritmo</h3>
+                <p>O algoritmo da Meta é um sistema de aprendizado de máquina que busca mostrar cada anúncio para as pessoas com maior probabilidade de realizar a ação desejada — curtir, comentar, compartilhar, salvar ou seguir.</p>
+                <p>Ele analisa padrões de comportamento e ajusta a entrega com base em milhares de sinais de usuário (tempo de tela, interações, tipo de conteúdo preferido etc.).</p>
+
+                <hr>
+
+                <h3>2. Como o sistema aprende</h3>
+                <p>O processo acontece em três camadas de aprendizado:</p>
+
+                <ol>
+                    <li><strong>Usuário:</strong> o algoritmo entende quem interage com o tipo de conteúdo.<br>Exemplo: pessoas que comentam vídeos sobre marketing.</li>
+                    <li><strong>Anúncio:</strong> identifica quais criativos geram mais engajamento (vídeo curto, humor, bastidor etc.).</li>
+                    <li><strong>Conta:</strong> aprende como o anunciante se comporta — frequência de alterações, consistência, volume de investimento.</li>
+                </ol>
+
+                <div class="callout">
+                    <p>Quanto mais consistente e previsível for a sua conta, mais eficiente o aprendizado.</p>
+                </div>
+
+                <hr>
+
+                <h3>3. O ciclo de aprendizado</h3>
+                <p>Cada novo conjunto ou alteração grande reinicia o aprendizado. Durante esse período (Learning Phase), o sistema precisa de volume — cerca de 50 interações por semana — para entender quem engaja com o seu conteúdo.</p>
+
+                <p><strong>Alterações que reiniciam o aprendizado:</strong></p>
+                <ul>
+                    <li>Mudar orçamento em mais de 30%</li>
+                    <li>Trocar criativo</li>
+                    <li>Alterar segmentação</li>
+                    <li>Mudar o evento de otimização</li>
+                </ul>
+
+                <div class="callout">
+                    <p>Durante a fase de aprendizado, o custo por resultado é mais instável. Deixe o algoritmo "respirar" — evite mexer demais.</p>
+                </div>
+
+                <hr>
+
+                <h3>4. O que o algoritmo valoriza em campanhas de engajamento</h3>
+                <ol>
+                    <li><strong>Taxa de interação real (engajamento por alcance):</strong> mede se o público responde com ações autênticas.</li>
+                    <li><strong>Tempo de visualização (em vídeos):</strong> quanto mais tempo o público assiste, melhor o sinal.</li>
+                    <li><strong>Feedback do usuário:</strong> ocultar anúncios, denúncias ou comentários negativos reduzem entrega.</li>
+                    <li><strong>Qualidade da conta:</strong> páginas ativas e com bom histórico orgânico pagam menos.</li>
+                </ol>
+
+                <hr>
+
+                <h3>5. A lógica interna da entrega</h3>
+                <p>Pense assim:</p>
+                <ul>
+                    <li>A Meta testa seu anúncio com uma amostra pequena.</li>
+                    <li>Observa quem interage.</li>
+                    <li>Cria perfis comportamentais dessas pessoas.</li>
+                    <li>Amplia a entrega para usuários parecidos.</li>
+                </ul>
+
+                <div class="callout">
+                    <p>O criativo e o público inicial "ensinam" ao algoritmo quem você quer atingir.</p>
+                </div>
+
+                <hr>
+
+                <h3>6. Engajamento x Conversão</h3>
+                <p>O algoritmo é orientado pelo objetivo. Se o objetivo é <strong>engajamento</strong>, ele buscará quem tem o hábito de engajar, não necessariamente comprar.</p>
+
+                <ul>
+                    <li>Campanhas de engajamento geram visibilidade, autoridade e prova social.</li>
+                    <li>Não devem ser usadas para medir intenção de compra.</li>
+                </ul>
+
+                <blockquote>
+                    Use engajamento como aquecimento, não como fim.
+                </blockquote>
+
+                <hr>
+
+                <h3>7. O que otimiza o aprendizado</h3>
+                <ul>
+                    <li>Publicar conteúdos nativos, que pareçam orgânicos.</li>
+                    <li>Manter frequência constante de anúncios ativos.</li>
+                    <li>Evitar pausas longas — pausas resfriam o aprendizado.</li>
+                    <li>Criar variações de criativos (mudando só um elemento de cada vez).</li>
+                    <li>Usar públicos amplos: o algoritmo precisa liberdade para testar perfis.</li>
+                </ul>
+
+                <hr>
+
+                <h3>8. Erros comuns</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Erro</th>
+                            <th>Consequência</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Trocar criativos todo dia</td>
+                            <td>O algoritmo nunca aprende</td>
+                        </tr>
+                        <tr>
+                            <td>Público muito restrito</td>
+                            <td>Falta de volume e entrega cara</td>
+                        </tr>
+                        <tr>
+                            <td>Orçamento pequeno demais</td>
+                            <td>Falta de dados e aprendizado lento</td>
+                        </tr>
+                        <tr>
+                            <td>Objetivo errado (ex: tráfego)</td>
+                            <td>Engajamento falso e desqualificado</td>
+                        </tr>
+                        <tr>
+                            <td>Pausar e religar toda hora</td>
+                            <td>Perda total de consistência</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- MÓDULOS 3-11 (PLACEHOLDERS) -->
+            <section id="modulo3" class="section">
+                <h1>🔹 3. Aprendizado e Otimização</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo4" class="section">
+                <h1>🔹 4. Inteligência da Página</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo5" class="section">
+                <h1>🔹 5. Segmentação</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo6" class="section">
+                <h1>🔹 6. Criativos</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo7" class="section">
+                <h1>🔹 7. Estratégias de Campanha</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo8" class="section">
+                <h1>🔹 8. Ganchos</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo9" class="section">
+                <h1>🔹 9. Métricas</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo10" class="section">
+                <h1>🔹 10. Decisões Técnicas</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+
+            <section id="modulo11" class="section">
+                <h1>🔹 11. Boas Práticas</h1>
+                <p><em>Conteúdo será adicionado em breve...</em></p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Navegação
+        const links = document.querySelectorAll('.nav-menu a');
+        const sections = document.querySelectorAll('.section');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active de todos
+                links.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                
+                // Adiciona active no clicado
+                link.classList.add('active');
+                const targetId = link.getAttribute('href').substring(1);
+                document.getElementById(targetId).classList.add('active');
+                
+                // Scroll suave para o topo
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
