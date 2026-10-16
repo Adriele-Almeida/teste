@@ -4,7 +4,7 @@ Aplicativo privado responsivo em português para leitura, busca, filtros, coleç
 
 ## Estado
 
-Backend publicado no projeto Supabase `Automações Estratégicas` (`uptzkgvfdycxlqnsgokl`), com tabelas exclusivas `ac_*` e bucket privado `ac-originals`. Os JSON originais são mantidos byte por byte. O índice de leitura é derivado e preserva integralmente o objeto de cada registro. Todas as mensagens do mapping são apresentadas, inclusive ramificações, mensagens de ferramentas e sistema. Metadados e campos adicionais estão na aba Todos os dados. Exportações TXT e PDF incluem o JSON integral no final.
+Backend publicado no projeto Supabase `Automações Estratégicas` (`uptzkgvfdycxlqnsgokl`), com tabelas exclusivas `ac_*` e bucket privado `ac-originals`. Os JSON originais são mantidos byte por byte. O índice de leitura é derivado e preserva integralmente o objeto de cada registro. Registros com caracteres incompatíveis com JSONB são mantidos como JSON serializado e reconstruídos sem perda. Todas as mensagens do mapping são apresentadas, inclusive ramificações, mensagens de ferramentas e sistema. Metadados e campos adicionais estão na aba Todos os dados. Exportações TXT e PDF incluem o JSON integral no final.
 
 O acesso usa senha definida pela proprietária por um link de ativação de uso único. Senhas são derivadas com PBKDF2-SHA256, 310.000 iterações e salt individual. Sessões opacas de 30 dias são armazenadas somente em hash no servidor. Tentativas de entrada são limitadas. As tabelas usam RLS e acesso direto de anon/authenticated revogado. O serviço valida a sessão antes de cada operação. Chaves de serviço permanecem no ambiente do Supabase.
 

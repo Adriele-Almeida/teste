@@ -1,0 +1,20 @@
+{
+  "files_verified": 35,
+  "records": 3207,
+  "original_bytes": 187390318,
+  "checks": [
+    "35 originals downloaded and compared byte-for-byte",
+    "35 indexed samples equal their source objects",
+    "special U+0000 record reconstructed exactly",
+    "catalog and manifest match",
+    "anonymous API and storage blocked",
+    "filters",
+    "independent state fields synchronized",
+    "all branch messages rendered",
+    "safe text rendering",
+    "integral TXT and PDF content",
+    "frontend syntax and DOM interactions"
+  ],
+  "browser_visual_qa": "not completed: cloud browser timeout",
+  "vercel_deployment": "blocked: HTTP 403 creating project"
+}

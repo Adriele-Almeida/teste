@@ -46,7 +46,7 @@ Deno.serve(async(req)=>{
  if(b.ids){if(!b.ids.length)return out({rows:[],count:0});q=q.in('id',b.ids);}
  const offset=Math.max(0,Number(b.offset)||0);const r=check(await q.order('created_at',{ascending:b.sort==='oldest',nullsFirst:false}).order('id').range(offset,offset+49));return out({rows:r.data,count:r.count});
  }
- if(b.action==='record'){const r=check(await db.from('ac_records').select('id,file_name,ordinal,title,created_at,model,raw').eq('id',b.id).single());return out(r.data);}
+ if(b.action==='record'){const r=check(await db.from('ac_records').select('id,file_name,ordinal,title,created_at,model,raw,raw_serialized').eq('id',b.id).single());if(r.data.raw_serialized!==null)r.data.raw=JSON.parse(r.data.raw_serialized);delete r.data.raw_serialized;return out(r.data);}
  if(b.action==='state'){
  const patch:any={updated_at:new Date().toISOString()};
  if(typeof b.favorite==='boolean')patch.favorite=b.favorite;
