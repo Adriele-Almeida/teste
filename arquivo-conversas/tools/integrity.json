@@ -1,0 +1,212 @@
+[
+  {
+    "name": "ads.json",
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2,
+    "records": 1
+  },
+  {
+    "name": "codex.json",
+    "sha256": "537b248b7b04fda56a38295f00ea5cfc44ee4788a0eb5f5af1767e52f1890919",
+    "bytes": 232460,
+    "records": 5
+  },
+  {
+    "name": "conversation_asset_file_names.json",
+    "sha256": "b36529f26da52d37f08831ae87b36515399738ee0b647cb7860e244059e9582a",
+    "bytes": 1385295,
+    "records": 1
+  },
+  {
+    "name": "conversations-000.json",
+    "sha256": "55981c3e13edb087a41712e2ad5eec09ed897c015ad853420d28f7e45da30a2f",
+    "bytes": 5060501,
+    "records": 100
+  },
+  {
+    "name": "conversations-001.json",
+    "sha256": "5d9c650a57c9f7e423e8d4bec7a9360c6919c11cde864c068ac9614e0ae261cc",
+    "bytes": 3065684,
+    "records": 100
+  },
+  {
+    "name": "conversations-002.json",
+    "sha256": "8384d4d6f022d94d3964f63c4a3e8831cec60c88bb1f4171ff010e0025707a35",
+    "bytes": 3708679,
+    "records": 100
+  },
+  {
+    "name": "conversations-003.json",
+    "sha256": "02c2cf8f128259820d35977b5d82386cbd4b5eb1bd57242b8a4003fbeb6f0844",
+    "bytes": 5822702,
+    "records": 100
+  },
+  {
+    "name": "conversations-004.json",
+    "sha256": "d04d0c5080a6e6fd866e9857b64077deb0526d0fd39ddbb9264265181ed82de5",
+    "bytes": 4457131,
+    "records": 100
+  },
+  {
+    "name": "conversations-005.json",
+    "sha256": "33404d8664ea7d18aa2a7b58963e2752f286d4c83ecbce37b156c95c0e4f0f08",
+    "bytes": 5462432,
+    "records": 100
+  },
+  {
+    "name": "conversations-006.json",
+    "sha256": "61f73ccdd12af87ecb124d5ffcfddfda30aa7c092a78aa028ec4a5c9a5c94f0f",
+    "bytes": 5361755,
+    "records": 100
+  },
+  {
+    "name": "conversations-007.json",
+    "sha256": "135f6f01fc25a26f01630bc40439753a6c2442f3eae29eeac246b32faa17ebab",
+    "bytes": 4556413,
+    "records": 100
+  },
+  {
+    "name": "conversations-008.json",
+    "sha256": "3f165b31c056d89ec9974e1ae0df5fff83964efc46d8d361054bbf2ba3d3e224",
+    "bytes": 6237623,
+    "records": 100
+  },
+  {
+    "name": "conversations-009.json",
+    "sha256": "44b6df72711c4e94787ef61777f274987db44f944b07ab80843f59d6e751b261",
+    "bytes": 2752108,
+    "records": 100
+  },
+  {
+    "name": "conversations-010.json",
+    "sha256": "d48c9713e2c5415c364b1a2a4f9623cbf646441774e83a3f122a444c47bae5ef",
+    "bytes": 3005962,
+    "records": 100
+  },
+  {
+    "name": "conversations-011.json",
+    "sha256": "26b5e02e2e7dc294bd17589f2ddacc2d38d72fbc0586a71f002fdce38316c1f0",
+    "bytes": 2655962,
+    "records": 100
+  },
+  {
+    "name": "conversations-012.json",
+    "sha256": "d5a53348d0dd715f2d4f206aa0711313b13f7dbe33b45b5e5071445663f8dc69",
+    "bytes": 2720866,
+    "records": 100
+  },
+  {
+    "name": "conversations-013.json",
+    "sha256": "1e7e73e6089af163a32dd0222acad646796866564544179ab638d03d5e7399ca",
+    "bytes": 3836962,
+    "records": 100
+  },
+  {
+    "name": "conversations-014.json",
+    "sha256": "bf33c753256465ed6ae7873ac66257345fa29f5973402d9ffcee958268b07217",
+    "bytes": 2928498,
+    "records": 100
+  },
+  {
+    "name": "conversations-015.json",
+    "sha256": "bd88c4431a64e4de7e892348c7f61b6287cdb66ce8785fffde66eba3f211ed4f",
+    "bytes": 3073474,
+    "records": 100
+  },
+  {
+    "name": "conversations-016.json",
+    "sha256": "155e5ae31c24ab1eb56a48ec1d2168fba1d695b5d46cc594ec53f506a47ab970",
+    "bytes": 1450909,
+    "records": 100
+  },
+  {
+    "name": "conversations-047.json",
+    "sha256": "2dddc9f6a9209d51dc5de130d0f77b015be19640ecea4975a1143dc65bf7fcee",
+    "bytes": 13098754,
+    "records": 100
+  },
+  {
+    "name": "conversations-048.json",
+    "sha256": "52f92b065aa4eacbf3615385e7f784d2798c1b588faed1e92beb6e60894ca260",
+    "bytes": 9159432,
+    "records": 100
+  },
+  {
+    "name": "conversations-049.json",
+    "sha256": "340162a4b79f5cc07eec9bae7d5fb1dccd35372bda46f8360126bc42c8ffdee0",
+    "bytes": 9477495,
+    "records": 100
+  },
+  {
+    "name": "conversations-050.json",
+    "sha256": "8ab45c6618b9ad627bed7acdf06c80d81882abfaac0536b83d8fdf383d509cc8",
+    "bytes": 9406638,
+    "records": 100
+  },
+  {
+    "name": "conversations-051.json",
+    "sha256": "f74579cb16dd0776080259d36a1ef412becefb192c6875bb2e2873786e93cdf3",
+    "bytes": 4746642,
+    "records": 100
+  },
+  {
+    "name": "conversations-052.json",
+    "sha256": "0a1f6c20e1e3afc32f53cddc5ff0e061d921fed030671974ccf27cb4f3c0ea7d",
+    "bytes": 3734553,
+    "records": 100
+  },
+  {
+    "name": "conversations-053.json",
+    "sha256": "ce04b50c7bd1c552353351f52035b9042837c8440daf71e26baa9bd201576f72",
+    "bytes": 5260974,
+    "records": 100
+  },
+  {
+    "name": "conversations-054.json",
+    "sha256": "9422fd14966550cb25c2eea0d2d3913d398900826196c9c3b256e40a38897951",
+    "bytes": 5296087,
+    "records": 100
+  },
+  {
+    "name": "conversations-055.json",
+    "sha256": "61387a17c0940d7a79e4205c7575538e208728a629e73208794a5f16acdfea0b",
+    "bytes": 7840815,
+    "records": 100
+  },
+  {
+    "name": "conversations-056.json",
+    "sha256": "f2c44fb7195adab54094392ff9c71fefb7d3eaca21d93ca70ea5d11ed4c3e4e2",
+    "bytes": 5683727,
+    "records": 100
+  },
+  {
+    "name": "conversations-057.json",
+    "sha256": "c0fd5eed5e351ceca1f101a8ccb93431eaae2ba0ce003ba37491c264f21e8ebd",
+    "bytes": 7014635,
+    "records": 100
+  },
+  {
+    "name": "conversations-058.json",
+    "sha256": "84227b8ad1100c66b65ca580c81742e0910823987d0f46bde4c4cf3f1613d209",
+    "bytes": 8323465,
+    "records": 100
+  },
+  {
+    "name": "conversations-059.json",
+    "sha256": "f42831b838f535cf32ae968e0cad0aa585a486727ac72821b43dc3eb57b7f012",
+    "bytes": 4762223,
+    "records": 100
+  },
+  {
+    "name": "conversations-060.json",
+    "sha256": "a0c73e8c1ba3b920d8277bd27b28b55d3a72fba4e2a8789068b4260856fdc089",
+    "bytes": 10611905,
+    "records": 100
+  },
+  {
+    "name": "conversations-061.json",
+    "sha256": "e4e9cc3c4e4fa2fd952af23b2bda3b74d0ef40926be408e38eea6aa1d9f109d8",
+    "bytes": 15197555,
+    "records": 100
+  }
+]
